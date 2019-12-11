@@ -28,11 +28,11 @@ class Song
   
   def Song.genre_count 
     g_hash = {}
-    # g_hash[self.genres] = self.count 
-    # g_hash
-    self.genres.each do |g|
-      g_hash[g] = self.count 
-      binding.pry
+    @@genres.each do |g|
+      if g_hash.has_key?(g)
+        g_hash[g] += 1 
+      else 
+        g_hash[g] = 1 
     end 
     g_hash
   end 
