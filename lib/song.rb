@@ -27,19 +27,27 @@ class Song
   end 
   
   def Song.genre_count 
-    g_hash = {}
-    @@genres.each do |g|
-      if g_hash.has_key?(g)
-        g_hash[g] += 1 
+    genre_hash = {}
+    @@genres.each do |genre_key|
+      if genre_hash.has_key?(genre_key)
+        genre_hash[genre_key] += 1 
       else 
-        g_hash[g] = 1 
+        genre_hash[genre_key] = 1 
       end 
     end 
-    g_hash
+    genre_hash
   end 
   
   def Song.artist_count
-    
+    artist_hash = {}
+    @@artist.each do |artist_key|
+      if artist_hash.has_key?(artist_key)
+        artist_hash[artist_key] += 1 
+      else 
+        artist_hash[artist_key] = 1
+      end 
+    end 
+    artist_hash
   end 
   
 end 
