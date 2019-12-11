@@ -33,6 +33,7 @@ class Song
         g_hash[g] += 1 
       else 
         g_hash[g] = 1 
+      end 
     end 
     g_hash
   end 
