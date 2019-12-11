@@ -31,7 +31,7 @@ class Song
     # g_hash[self.genres] = self.count 
     # g_hash
     self.genres.each do |g|
-      g_hash[g]
+      g_hash[g] = self.count 
     end 
     g_hash
   end 
