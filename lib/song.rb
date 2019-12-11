@@ -27,13 +27,15 @@ class Song
   end 
   
   def Song.genre_count 
-    # g_hash = {}
+    g_hash = {}
     # g_hash[self.genres] = self.count 
     # g_hash
     self.genres.each do |g|
+      g_hash[g] = self.count
       puts g 
       # binding.pry
     end 
+    g_hash
   end 
   
   def Song.artist_count
